@@ -1,0 +1,55 @@
+/* Fonte padrão sans-serif fina */
+body {
+    font-family: "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+    font-weight: 300; /* thin/light */
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    padding: 25px 40px;
+    margin-top: 10px;   /* move para baixo */
+    margin-left: 190px;  /* move para a direita */
+    gap: 30px;  
+}
+
+/* Título */
+header h1 {
+    font-size: 48px;
+    letter-spacing: 6px;
+    font-weight: 300; /* leve */
+    margin: 0;
+}
+
+/* Navegação */
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+/* Botões do menu */
+nav button {
+    background: none;
+    border: none;
+    font-size: 14px;
+    font-weight: 300;
+    cursor: pointer;
+    padding: 10px 16px;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+/* Hover nos botões */
+nav button:hover {
+    background: #f2f2f2;
+}
+
+/* Aumenta apenas o botão LOGIN (4º botão) */
+nav button:nth-child(4) {
+    font-size: 20px;  /* aumenta só o LOGIN */
+    font-weight: 400; /* opcional, mais destacado */
+}
