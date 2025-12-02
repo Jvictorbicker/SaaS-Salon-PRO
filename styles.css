@@ -61,3 +61,64 @@ nav button {
 nav button:hover {
     background: #f2f2f2;
 }
+
+#hero {
+    position: absolute;      
+    top: 45%;                
+    left: 30%;               
+    transform: translateY(-50%); 
+    text-align: left;
+    font-family: "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+    font-weight: 300;
+}
+
+#hero h2 {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 120px; /* só espaço entre h2 e h3 */
+
+}
+
+#hero h3 {
+    font-weight: 400;
+    margin-top: 0; /* remove margem extra do navegador */
+    margin-bottom: 40px;
+    position: relative;   /* necessário para usar 'left' */
+    left: -50px;          /* desloca 500px à esquerda */
+}
+
+.btn-hero {
+    margin-top: 0; /* sem espaço extra, fica colado no h3 se quiser */
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    background: black;
+    color: white;
+    cursor: pointer;
+    border-radius: 6px;
+    position: relative;
+    left: 30px;
+}
+
+#how-it-works {
+    position: absolute;      
+    top: 99%;                
+    left: 58%;               
+    transform: translateY(-50%); 
+    text-align: left;
+    font-family: "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+    font-weight: 300;
+}
+
+#how-it-works h2 {
+    font-size: 16px;
+    font-weight: 400;
+    word-spacing: 1px;
+}
+
+#how-it-works p {
+    font-size: 16px;
+    font-weight: 400;
+    word-spacing: 1px;
+    margin-top: 80px; /* afasta o parágrafo do h2 */
+}
