@@ -12,9 +12,22 @@ header {
     display: flex;
     align-items: center;
     padding: 25px 40px;
-    margin-top: 10px;   /* move para baixo */
-    margin-left: 190px;  /* move para a direita */
+    margin-top: 10px;   
+    margin-left: 420px;  
     gap: 30px;  
+    position: relative; /* necessário para o ::after */
+}
+
+/* Linha decorativa com começo e fim */
+header::after {
+    content: "";
+    display: block;
+    width: 1200px;               /* comprimento da linha */
+    height: 1px;                /* espessura */
+    background-color: #bdb9b9;  /* cor da linha */
+    position: absolute;
+    bottom: -25;                  /* posição vertical no header */
+    left: -55;                    /* ponto inicial da linha */
 }
 
 /* Título */
@@ -41,15 +54,10 @@ nav button {
     padding: 10px 16px;
     border-radius: 8px;
     transition: 0.2s;
+    margin-top: 10px
 }
 
 /* Hover nos botões */
 nav button:hover {
     background: #f2f2f2;
-}
-
-/* Aumenta apenas o botão LOGIN (4º botão) */
-nav button:nth-child(4) {
-    font-size: 20px;  /* aumenta só o LOGIN */
-    font-weight: 400; /* opcional, mais destacado */
 }
