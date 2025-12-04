@@ -111,14 +111,148 @@ nav button:hover {
 }
 
 #how-it-works h2 {
+    position: relative;
     font-size: 16px;
     font-weight: 400;
     word-spacing: 1px;
+    left: 20;
 }
 
 #how-it-works p {
+    position: relative;
+    font-size: 20px;
+    font-weight: 400;
+    word-spacing: 1px;
+    margin-top: 100px;
+    text-align: center;
+    right: 95px;
+}
+
+.btn-how{
+    margin-top: 0; 
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    background: black;
+    color: white;
+    cursor: pointer;
+    border-radius: 6px;
+    position: relative;
+    left: 30px;
+}
+
+#functions {
+    position: absolute;      
+    top: 160%;                
+    left: 40%;            
+    transform: translateY(-50%); 
+    text-align: left;
+    font-family: "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+    font-weight: 300;
+    margin-top: 50px;
+}
+
+#functions h2 {
+    position: relative;
     font-size: 16px;
     font-weight: 400;
     word-spacing: 1px;
-    margin-top: 80px; /* afasta o parágrafo do h2 */
+    text-align: center;
+    margin-top: 25%;
+    right: 17%;
+}
+
+.functions1 h3 {
+    position: relative;
+    font-weight: 400;
+    word-spacing: 1px;
+    text-align: center;
+    font-size: 32px;
+    margin-top: 0px;
+    font-size: 32px;
+    margin-bottom: 200px;
+    right: 15%;
+}
+
+.function-item h3 {
+    position: relative;
+    right: 60%;
+    font-size: 18px;
+    top: -34px;
+}
+
+.function-item p {
+    position: relative;
+    text-align: center;
+    right: 99%;
+    font-size: 18px;
+    top: -34px;
+}
+
+.function-item2 h3 {
+    position: relative;
+    right: 0%;
+    margin-top: -170px;
+    font-size: 18px;
+}
+
+.function-item2 p {
+    position: relative;
+    text-align: center;
+    right: 40%;
+    font-size: 18px;
+}
+
+.function-item3 h3 {
+    position: relative;
+    right: -53%;
+    margin-top: -165px;
+    font-size: 18px;
+}
+
+.function-item3 p {
+    position: relative;
+    text-align: center;
+    right: -19%;
+    font-size: 18px;
+}
+
+.function-item4 h3 {
+    position: relative;
+    right: -112%;
+    margin-top: -137px;
+    font-size: 18px;
+}
+
+.function-item4 p {
+    position: relative;
+    text-align: center;
+    right: -85%;
+    font-size: 18px;
+}
+
+.btn-discover{
+    margin-top: 75px; /* sem espaço extra, fica colado no h3 se quiser */
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    background: black;
+    color: white;
+    cursor: pointer;
+    border-radius: 6px;
+    position: relative;
+    left: -17%;
+}
+
+.btn-try{
+    margin-top: 0; /* sem espaço extra, fica colado no h3 se quiser */
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    background: black;
+    color: white;
+    cursor: pointer;
+    border-radius: 6px;
+    position: relative;
+    left: -12%;
 }
