@@ -43,9 +43,15 @@ body {
 .main-nav {
     display: flex;
     gap: 15px;
-    flex-wrap: nowrap; /* impede quebra das opções */
+    flex-wrap: nowrap;
+    position: static; /* normal no desktop */
+    width: auto;
+    height: auto;
+    background: none;
+    padding: 0;
+    box-shadow: none;
+    transition: none;
 }
-
 
 #menu-toggle {
     display: none;
@@ -53,20 +59,27 @@ body {
 
 .menu-toggle span {
     display: block;
-    height: 4px; 			/* barras achatadas */
+    height: 4px;
     background: #000;
     border-radius: 2px;
     transition: all 0.3s ease;
 }
 
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0; /* desaparece a barra do meio */
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
 /* Botão hambúrguer */
 .menu-toggle {
-    display: none; /* só aparece no mobile */
-    flex-direction: column;
-    justify-content: space-between;
-    width: 40px;
-    height: 25px;
-    cursor: pointer;
+    display: none;
 }
 
 .main-nav button {
@@ -269,25 +282,33 @@ body {
     /* Mostra hambúrguer no mobile */
     .menu-toggle {
         display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 40px;
+        height: 25px;
+        cursor: pointer;
+        z-index: 20;
     }
 
     /* Menu mobile */
     .main-nav {
-        display: none;
+        display: flex;
         flex-direction: column;
-        gap: 10px;
-        width: 100%;
+        gap: 15px;
+        position: fixed;
+        top: 0;
+        right: -250px; /* fora da tela */
+        height: 100%;
+        width: 250px;
         background: #fff;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        z-index: 5;
-        border-top: 1px solid #bdb9b9;
-        padding: 10px 0;
+        padding: 60px 20px;
+        box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+        transition: right 0.3s ease;
+        z-index: 10;
     }
 
     .main-nav.active {
-        display: flex;
+        right: 0;
     }
 
     /* Ajusta logo */
