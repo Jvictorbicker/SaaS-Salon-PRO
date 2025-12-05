@@ -41,19 +41,19 @@ body {
 }
 /* Main nav */
 .main-nav {
-  display: flex;
-  gap: 15px;
-  flex-wrap: nowrap; /* impede quebra das opções */
+    display: flex;
+    gap: 15px;
+    flex-wrap: nowrap; /* impede quebra das opções */
 }
 
 
 #menu-toggle {
-  display: none;
+    display: none;
 }
 
 .menu-toggle span {
     display: block;
-    height: 4px;           /* barras achatadas */
+    height: 4px; 			/* barras achatadas */
     background: #000;
     border-radius: 2px;
     transition: all 0.3s ease;
@@ -61,12 +61,12 @@ body {
 
 /* Botão hambúrguer */
 .menu-toggle {
-  display: none; /* só aparece no mobile */
-  flex-direction: column;
-  justify-content: space-between;
-  width: 40px;
-  height: 25px;
-  cursor: pointer;
+    display: none; /* só aparece no mobile */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40px;
+    height: 25px;
+    cursor: pointer;
 }
 
 .main-nav button {
@@ -210,7 +210,7 @@ body {
     border-radius: 10px;
 }
 
-/* Footer */
+/* --- FOOTER (Padrão: Telas Menores) --- */
 .site-footer {
     padding: 60px 40px 20px;
     background: #f2f2f2;
@@ -218,9 +218,17 @@ body {
 
 .footer-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 40px;
+    /* 🔹 NOVO PADRÃO: 2 Colunas (para telas pequenas/médias) */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 20px;
     margin-bottom: 20px;
+}
+
+/* 🔹 Força a primeira coluna (SALON PRO) a ocupar 2 espaços no layout de 2 colunas */
+.footer-grid .footer-column:first-child {
+    grid-column: 1 / -1;
+    text-align: center; /* Centraliza o título "SALON PRO" */
+    margin-bottom: 15px;
 }
 
 .footer-column h3 {
@@ -229,11 +237,14 @@ body {
 
 .footer-column ul {
     list-style: none;
+    padding: 0;
 }
 
 .footer-column a {
     text-decoration: none;
     color: #000;
+    display: block; /* Garante que cada link ocupe uma linha */
+    padding: 2px 0;
 }
 
 .social-links a {
@@ -241,7 +252,11 @@ body {
     margin-right: 10px;
 }
 
+/* --- MEDIA QUERY (max-width: 768px) --- */
 @media (max-width: 768px) {
+    
+    /* 💡 REAJUSTES DE FONTES E MARGENS PARA TELAS MENORES */
+    
     .footer-grid h2 {
         display: none;
     }
@@ -319,13 +334,16 @@ body {
     .subscription-card {
         font-size: 14px;
     }
-     .footer-grid {
-        grid-template-columns: 1fr; /* uma coluna só */
-        gap: 20px;
-        text-align: center; /* centraliza os itens */
+
+    /* 🔹 O bloco de código que você enviou para o footer foi removido/ajustado, 
+       pois ele forçava 1 coluna. Mantemos as regras de 2 colunas definidas acima. */
+    .footer-grid {
+        /* As 2 colunas definidas no padrão (acima) já estão ativas. 
+           Se quiser centralizar todo o texto: */
+        text-align: center;
     }
     .footer-column {
-        width: 100%;
+        width: auto; /* Deixa o Grid controlar a largura */
     }
     .footer-column h3 {
         font-size: 16px;
@@ -337,5 +355,20 @@ body {
     .social-links a {
         display: inline-block;
         margin: 5px 5px; /* espaçamento menor */
+    }
+}
+
+/* --- MEDIA QUERY (min-width: 1024px) - Layout em LINHA RETA --- */
+@media (min-width: 1024px) {
+    .footer-grid {
+        /* Força todas as 5 colunas a ficarem lado a lado (linha reta) */
+        grid-template-columns: repeat(5, 1fr);
+        gap: 20px;
+    }
+
+    /* 🔹 Remove a regra que fazia a primeira coluna ocupar 2 espaços, para que ela se alinhe com as outras */
+    .footer-grid .footer-column:first-child {
+        grid-column: unset; 
+        text-align: left; /* Volta o alinhamento para a esquerda em desktop */
     }
 }
