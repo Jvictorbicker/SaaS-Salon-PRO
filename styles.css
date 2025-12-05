@@ -242,6 +242,9 @@ body {
 }
 
 @media (max-width: 768px) {
+    .footer-grid h2 {
+        display: none;
+    }
     .site-header {
         flex-direction: row;
         align-items: center;
@@ -255,27 +258,84 @@ body {
 
     /* Menu mobile */
     .main-nav {
-        display: none;          /* escondido por padrão */
+        display: none;
         flex-direction: column;
         gap: 10px;
         width: 100%;
         background: #fff;
         position: absolute;
-        top: 60px;              /* logo + padding do header */
+        top: 60px;
         left: 0;
         z-index: 5;
         border-top: 1px solid #bdb9b9;
         padding: 10px 0;
     }
 
-    /* Menu ativo */
     .main-nav.active {
         display: flex;
     }
 
-    /* Ajusta logo e padding */
+    /* Ajusta logo */
     .site-header .logo {
         font-size: 28px;
         letter-spacing: 3px;
+    }
+
+    /* 🔹 Ajuste das fontes em todo o site */
+    body {
+        font-size: 14px;
+    }
+
+    .hero-title {
+        font-size: 16px;
+    }
+
+    .hero-subtitle {
+        font-size: 24px;
+    }
+
+    .btn-hero, .btn-how, .btn-discover, .btn-try {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    .how-it-works .section-title,
+    .functions .section-title {
+        font-size: 20px;
+    }
+
+    .how-it-works .section-description {
+        font-size: 14px;
+    }
+
+    .function-card h3 {
+        font-size: 16px;
+    }
+
+    .function-card p {
+        font-size: 14px;
+    }
+
+    .subscription-card {
+        font-size: 14px;
+    }
+     .footer-grid {
+        grid-template-columns: 1fr; /* uma coluna só */
+        gap: 20px;
+        text-align: center; /* centraliza os itens */
+    }
+    .footer-column {
+        width: 100%;
+    }
+    .footer-column h3 {
+        font-size: 16px;
+    }
+    .footer-column a {
+        font-size: 14px;
+    }
+
+    .social-links a {
+        display: inline-block;
+        margin: 5px 5px; /* espaçamento menor */
     }
 }
