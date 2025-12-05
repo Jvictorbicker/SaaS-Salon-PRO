@@ -1,51 +1,38 @@
-/* Fonte padrão sans-serif fina */
-body {
-    font-family: "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
-    font-weight: 300; /* thin/light */
+/* Fonte padrão e reset básico */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+    font-weight: 300;
     background: #ffffff;
 }
 
 /* Header */
-header {
+.site-header {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    padding: 25px 40px;
-    margin-top: 10px;   
-    margin-left: 420px;  
-    gap: 30px;  
-    position: relative; /* necessário para o ::after */
+    padding: 20px 40px;
+    border-bottom: 1px solid #bdb9b9;
 }
 
-/* Linha decorativa com começo e fim */
-header::after {
-    content: "";
-    display: block;
-    width: 1200px;               /* comprimento da linha */
-    height: 1px;                /* espessura */
-    background-color: #bdb9b9;  /* cor da linha */
-    position: absolute;
-    bottom: -25;                  /* posição vertical no header */
-    left: -55;                    /* ponto inicial da linha */
-}
-
-/* Título */
-header h1 {
+.site-header .logo {
     font-size: 48px;
     letter-spacing: 6px;
-    font-weight: 300; /* leve */
-    margin: 0;
+    font-weight: 300;
+    margin-left: 50px;
 }
 
-/* Navegação */
-nav {
+.main-nav {
     display: flex;
     gap: 20px;
 }
 
-/* Botões do menu */
-nav button {
+.main-nav button {
     background: none;
     border: none;
     font-size: 14px;
@@ -54,41 +41,31 @@ nav button {
     padding: 10px 16px;
     border-radius: 8px;
     transition: 0.2s;
-    margin-top: 10px
 }
 
-/* Hover nos botões */
-nav button:hover {
+.main-nav button:hover {
     background: #f2f2f2;
 }
 
-#hero {
-    position: absolute;      
-    top: 45%;                
-    left: 30%;               
-    transform: translateY(-50%); 
+/* Hero Section */
+.hero {
     text-align: left;
-    font-family: "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
-    font-weight: 300;
+    padding: 100px 40px;
 }
 
-#hero h2 {
+.hero-title {
     font-size: 20px;
     font-weight: 400;
-    margin-bottom: 120px; /* só espaço entre h2 e h3 */
-
+    margin-bottom: 20px;
 }
 
-#hero h3 {
+.hero-subtitle {
+    font-size: 32px;
     font-weight: 400;
-    margin-top: 0; /* remove margem extra do navegador */
     margin-bottom: 40px;
-    position: relative;   /* necessário para usar 'left' */
-    left: -50px;          /* desloca 500px à esquerda */
 }
 
 .btn-hero {
-    margin-top: 0; /* sem espaço extra, fica colado no h3 se quiser */
     padding: 12px 25px;
     font-size: 16px;
     border: none;
@@ -96,40 +73,28 @@ nav button:hover {
     color: white;
     cursor: pointer;
     border-radius: 6px;
-    position: relative;
-    left: 30px;
 }
 
-#how-it-works {
-    position: absolute;      
-    top: 99%;                
-    left: 58%;               
-    transform: translateY(-50%); 
-    text-align: left;
-    font-family: "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
-    font-weight: 300;
-}
-
-#how-it-works h2 {
-    position: relative;
-    font-size: 16px;
-    font-weight: 400;
-    word-spacing: 1px;
-    left: 20;
-}
-
-#how-it-works p {
-    position: relative;
-    font-size: 20px;
-    font-weight: 400;
-    word-spacing: 1px;
-    margin-top: 100px;
+/* How It Works Section */
+.how-it-works {
+    padding: 80px 40px;
     text-align: center;
-    right: 95px;
 }
 
-.btn-how{
-    margin-top: 0; 
+.how-it-works .section-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.how-it-works .section-description {
+    font-size: 18px;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-how {
     padding: 12px 25px;
     font-size: 16px;
     border: none;
@@ -137,102 +102,49 @@ nav button:hover {
     color: white;
     cursor: pointer;
     border-radius: 6px;
-    position: relative;
-    left: 30px;
 }
 
-#functions {
-    position: absolute;      
-    top: 160%;                
-    left: 40%;            
-    transform: translateY(-50%); 
-    text-align: left;
-    font-family: "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
-    font-weight: 300;
-    margin-top: 50px;
+/* Functions Section */
+.functions {
+    padding: 80px 40px;
+    text-align: center;
 }
 
-#functions h2 {
-    position: relative;
+.functions .section-title {
+    font-size: 24px;
+    margin-bottom: 50px;
+}
+
+.functions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.function-card {
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.function-card h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.function-card p {
     font-size: 16px;
-    font-weight: 400;
-    word-spacing: 1px;
-    text-align: center;
-    margin-top: 25%;
-    right: 17%;
 }
 
-.functions1 h3 {
-    position: relative;
-    font-weight: 400;
-    word-spacing: 1px;
-    text-align: center;
-    font-size: 32px;
-    margin-top: 0px;
-    font-size: 32px;
-    margin-bottom: 200px;
-    right: 15%;
+/* Buttons da seção Functions */
+.functions-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
-.function-item h3 {
-    position: relative;
-    right: 60%;
-    font-size: 18px;
-    top: -34px;
-}
-
-.function-item p {
-    position: relative;
-    text-align: center;
-    right: 99%;
-    font-size: 18px;
-    top: -34px;
-}
-
-.function-item2 h3 {
-    position: relative;
-    right: 0%;
-    margin-top: -170px;
-    font-size: 18px;
-}
-
-.function-item2 p {
-    position: relative;
-    text-align: center;
-    right: 40%;
-    font-size: 18px;
-}
-
-.function-item3 h3 {
-    position: relative;
-    right: -53%;
-    margin-top: -165px;
-    font-size: 18px;
-}
-
-.function-item3 p {
-    position: relative;
-    text-align: center;
-    right: -19%;
-    font-size: 18px;
-}
-
-.function-item4 h3 {
-    position: relative;
-    right: -112%;
-    margin-top: -137px;
-    font-size: 18px;
-}
-
-.function-item4 p {
-    position: relative;
-    text-align: center;
-    right: -85%;
-    font-size: 18px;
-}
-
-.btn-discover{
-    margin-top: 75px; /* sem espaço extra, fica colado no h3 se quiser */
+.btn-discover, .btn-try {
     padding: 12px 25px;
     font-size: 16px;
     border: none;
@@ -240,19 +152,77 @@ nav button:hover {
     color: white;
     cursor: pointer;
     border-radius: 6px;
-    position: relative;
-    left: -17%;
 }
 
-.btn-try{
-    margin-top: 0; /* sem espaço extra, fica colado no h3 se quiser */
-    padding: 12px 25px;
-    font-size: 16px;
-    border: none;
-    background: black;
-    color: white;
-    cursor: pointer;
-    border-radius: 6px;
-    position: relative;
-    left: -12%;
+/* Subscriptions Section */
+.subscriptions {
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.subscription-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.subscription-card {
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+/* Footer */
+.site-footer {
+    padding: 60px 40px 20px;
+    background: #f2f2f2;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 40px;
+    margin-bottom: 20px;
+}
+
+.footer-column h3 {
+    margin-bottom: 15px;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column a {
+    text-decoration: none;
+    color: #000;
+}
+
+.social-links a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .site-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .main-nav {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .hero, .how-it-works, .functions, .subscriptions {
+        padding: 60px 20px;
+    }
+
+    .functions-buttons {
+        flex-direction: column;
+    }
 }
