@@ -18,6 +18,8 @@ body {
     align-items: center;
     padding: 20px 40px;
     border-bottom: 1px solid #bdb9b9;
+    position: relative;
+    flex-wrap: nowrap; /* impede quebra de linha */
 }
 
 .site-header .logo {
@@ -27,9 +29,44 @@ body {
     margin-left: 50px;
 }
 
+.menu-toggle {
+    display: none; /* só aparece no mobile */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 10;
+    position: relative;
+}
+/* Main nav */
 .main-nav {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: nowrap; /* impede quebra das opções */
+}
+
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-toggle span {
+    display: block;
+    height: 4px;           /* barras achatadas */
+    background: #000;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Botão hambúrguer */
+.menu-toggle {
+  display: none; /* só aparece no mobile */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40px;
+  height: 25px;
+  cursor: pointer;
 }
 
 .main-nav button {
@@ -204,25 +241,41 @@ body {
     margin-right: 10px;
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
     .site-header {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
     }
 
+    /* Mostra hambúrguer no mobile */
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* Menu mobile */
     .main-nav {
+        display: none;          /* escondido por padrão */
         flex-direction: column;
-        width: 100%;
         gap: 10px;
-        margin-top: 10px;
+        width: 100%;
+        background: #fff;
+        position: absolute;
+        top: 60px;              /* logo + padding do header */
+        left: 0;
+        z-index: 5;
+        border-top: 1px solid #bdb9b9;
+        padding: 10px 0;
     }
 
-    .hero, .how-it-works, .functions, .subscriptions {
-        padding: 60px 20px;
+    /* Menu ativo */
+    .main-nav.active {
+        display: flex;
     }
 
-    .functions-buttons {
-        flex-direction: column;
+    /* Ajusta logo e padding */
+    .site-header .logo {
+        font-size: 28px;
+        letter-spacing: 3px;
     }
 }
