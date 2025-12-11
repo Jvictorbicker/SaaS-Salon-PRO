@@ -9,24 +9,34 @@ body {
     font-family: "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
     font-weight: 300;
     background: #ffffff;
+
+    padding-top: 120px; /* ↑ Aumentei para afastar mais do header */
 }
 
-/* Header */
 .site-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
     border-bottom: 1px solid #bdb9b9;
-    position: relative;
     flex-wrap: nowrap; /* impede quebra de linha */
-}
 
+    /* ADIÇÕES PARA FICAR FIXO */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background: #ffffff; /* Evita que o fundo fique transparente ao rolar */
+}
 .site-header .logo {
     font-size: 48px;
     letter-spacing: 6px;
     font-weight: 300;
     margin-left: 50px;
+    color: #000;          /* mantém a cor */
+    text-decoration: none; /* remove sublinhado */
+    cursor: pointer;       /* mostra que é clicável */
 }
 
 .menu-toggle {

@@ -9,7 +9,7 @@
 <body>
     <!-- Header -->
     <header class="site-header">
-    <div class="logo">SALON PRO</div>
+    <a href="index.html" class="logo">SALON PRO</a>
 
     <!-- Botão hambúrguer -->
     <div class="menu-toggle">
@@ -21,9 +21,10 @@
     <!-- Menu lateral -->
     <nav class="main-nav">
         <button onclick="window.location.href='functions.html'">FUNCTIONS</button>
-        <button onclick="window.location.href='subscriptions.html'">SUBSCRIPTIONS</button>
+        <button id="btn-subscriptions">SUBSCRIPTIONS</button>
         <button onclick="window.location.href='trial.html'">GET A 7-DAY FREE TRIAL</button>
         <button onclick="window.location.href='login.html'">ALREADY A CUSTOMER? - LOGIN</button>
+        <script src="main.js" defer></script>
     </nav>
     </header>
     <!-- Hero Section -->
@@ -74,7 +75,7 @@
     </section>
 
     <!-- Subscription Section -->
-    <section class="subscriptions">
+    <section id="subscriptions" class="subscriptions"> 
         <h2 class="section-title">SUBSCRIBE NOW</h2>
         <h3 class="section-subtitle">SUBSCRIPTIONS AVAILABLE</h3>
 
