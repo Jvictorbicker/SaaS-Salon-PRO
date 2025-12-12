@@ -1,0 +1,81 @@
+/* Container do título */
+.title {
+    text-align: center;
+    margin: 40px auto;
+    width: 100%;
+    max-width: 900px;
+}
+
+/* Texto pequeno acima */
+.subtitle {
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+/* Título principal */
+.section-title {
+    font-size: 32px;
+    font-weight: 600;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+/* A linha embaixo do título */
+.title-line {
+    width: 80px; /* largura da linha */
+    height: 2px; /* espessura */
+    margin: 0 auto; /* centraliza */
+    margin-top: 10px;
+    border-radius: 2px;
+}
+
+.buttons-container {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        margin-left: 150px; /* ← Afastado mais da esquerda */
+        margin-top: 20px;
+        
+        font-family: Arial, sans-serif;
+        max-width: 300px;
+    }
+
+    .buttons-container button {
+        background: transparent;
+        color: black;
+        border: 1px solid black;
+        padding: 10px 14px;
+        font-size: 16px;
+        border-radius: 6px;
+        cursor: pointer;
+        text-align: left; /* mantém alinhado igual ao modelo da imagem */
+    }
+
+    .buttons-container button:hover {
+        background: #f2f2f2;
+    }
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 24px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+    }
+
+    .title-line {
+        width: 60px; /* linha menor no mobile */
+    }
+    .buttons {
+        width: 90%;
+    }
+
+    .buttons button {
+        font-size: 14px;
+        padding: 10px 14px;
+    }
+}
