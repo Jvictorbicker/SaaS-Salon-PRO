@@ -1,23 +1,23 @@
-# 💈 Salon Pro – SaaS para Barbearias
+# 💈 Salon Pro – SaaS for Barbershops
 
-O **Salon Pro** é um sistema **SaaS** desenvolvido para auxiliar barbearias na gestão do dia a dia, oferecendo controle de agendamentos, clientes e serviços de forma simples e eficiente.
+**Salon Pro** is a **SaaS** system developed to help barbershops manage their daily operations, providing scheduling, client, and service management in a simple and efficient way.
 
-O projeto utiliza **front-end web** com HTML, CSS e JavaScript e **back-end em Java com Spring Boot**, seguindo boas práticas como **Clean Architecture** e separação de responsabilidades.
-
----
-
-## 🚀 Funcionalidades (em desenvolvimento)
-
-- 🔐 Autenticação de usuários (login e cadastro)
-- 📅 Agendamento de horários
-- 👤 Gerenciamento de clientes
-- ✂️ Cadastro de serviços
-- 📊 Painel administrativo
-- 🏪 Suporte a múltiplas barbearias (SaaS)
+The project uses a **web front-end** with HTML, CSS, and JavaScript and a **back-end in Java with Spring Boot**, following best practices such as **Clean Architecture** and separation of responsibilities.
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## 🚀 Features (in development)
+
+- 🔐 User authentication (login and registration)
+- 📅 Appointment scheduling
+- 👤 Client management
+- ✂️ Service registration
+- 📊 Administrative dashboard
+- 🏪 Support for multiple barbershops (SaaS)
+
+---
+
+## 🛠️ Technologies Used
 
 ### Front-end
 - HTML5  
@@ -30,14 +30,14 @@ O projeto utiliza **front-end web** com HTML, CSS e JavaScript e **back-end em J
 - Spring Web  
 - Spring Data JPA  
 
-### Arquitetura
+### Architecture
 - Clean Architecture  
 - REST API  
-- Separação de camadas (UI, Use Cases, Domain, Infrastructure)
+- Layered separation (UI, Use Cases, Domain, Infrastructure)
 
 ---
 
-## 📁 Estrutura do Projeto
+## 📁 Project Structure
 
 ```text
 src/
